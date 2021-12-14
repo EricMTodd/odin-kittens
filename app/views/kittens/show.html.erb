@@ -1,1 +1,8 @@
 <h1>kittens#show</h1>
+
+<h1><%= @kitten.name %></h1>
+<h3>Age: <%= @kitten.age %></h3>
+<h3>Breed: <%= @kitten.breed %></h3>
+<h3>Color: <%= @kitten.color %></h3>
+<%= link_to "Edit", edit_kitten_path(@kitten) %> | 
+<%= link_to "Destroy", @kitten, method: :delete %>

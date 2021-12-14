@@ -25,14 +25,15 @@ class KittensController < ApplicationController
 
   def edit
     @kitten = Kitten.find(params[:id])
+    render :edit
   end
 
   def update
     @kitten = Kitten.find(params[:id])
 
-    if @kitten.save
+    if @kitten.update(kitten_params)
       flash[:notice] = "Kitten updated."
-      redirect_to show_kitten_path(@kitten)
+      redirect_to kitten_path(@kitten)
     else
       flash[:alert] = "Failed to update kitten!"
       render :new
