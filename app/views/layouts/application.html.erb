@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <div class="flash">
+      <div class="notice"><%= flash[:notice] %></div>
+      <div class="alert"><%= flash[:alert] %></div>
+    </div>
+    <%= link_to "Home", root_path %>
     <%= yield %>
   </body>
 </html>

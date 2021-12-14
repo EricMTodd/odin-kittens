@@ -3,3 +3,4 @@
 <%= form_with model: @kitten, url: update_kitten_path(@kitten) do |form| %>
   <%= render "form", form: form %>
 <% end %>
+  <%= link_to "Destroy", destroy_kitten_path(@kitten), method: :delete %>
