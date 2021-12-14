@@ -1,3 +1,5 @@
 <h1>kittens#new</h1>
 
-<%= render "form" %>
+<%= form_with model: @kitten, url: new_kitten_path do |form| %>
+  <%= render "form", form: form %>
+<% end %>
